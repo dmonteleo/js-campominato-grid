@@ -41,5 +41,5 @@ function getRandomNumber(min, max) {
 
 function getOddEven(n) {
   if(n % 2) return 'odd';
-  return event;
+  return 'even';
 }

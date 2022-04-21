@@ -1,6 +1,6 @@
-.clicked {
+/* .clicked {
   background-color: green;
-}
+} */
 
 .square.clicked span {
   display: block;
@@ -10,6 +10,6 @@
   background-color: green;
 }
 
-.square.clciked.odd {
+.square.clicked.odd {
   background-color: red;
 }
