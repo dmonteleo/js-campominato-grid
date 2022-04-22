@@ -2,20 +2,38 @@
 
 header {
   background-color: white;
+  height: 100px;
+}
+
+.header-box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  height: 100%;
 }
 
 /* MAIN */
 
 main {
   background-color:brown;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .container-griglia {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .griglia {
@@ -24,6 +42,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   align-content:flex-start;
+  margin: 50px;
 }
 
 .square {
@@ -37,12 +56,38 @@ main {
   color: white;
 }
 
+.square100 {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+}
+
+.square81 {
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+}
+
+.square49 {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+}
+
 .square span {
   display: none;
+}
+
+.bomb {
+  background-color: red;
+  color: white;
 }
 
 /* FOOTER */
 
 footer {
   background-color: white;
+  height: 50px;
+}
+
+footer div span {
+  line-height: 50px;
+  vertical-align: middle;
 }
