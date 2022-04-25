@@ -2,7 +2,7 @@
 
 header {
   background-color: white;
-  height: 100px;
+  height: 70px;
 }
 
 .header-box {
@@ -26,14 +26,14 @@ header img {
 
 main {
   background-color:brown;
-  /* height: 100vh; */
+  height: 570px;
 }
 
 .container-griglia {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
+  height: 100%;
 }
 
 .griglia {
@@ -42,7 +42,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   align-content:flex-start;
-  margin: 50px;
 }
 
 .square {
@@ -84,7 +83,7 @@ main {
 
 footer {
   background-color: white;
-  height: 50px;
+  height: 30px;
 }
 
 footer div span {

@@ -1,36 +1,59 @@
-const listNumbers = [];
+let listNumbers = [];
 const griglia = document.querySelector('.griglia');
+const main = document.querySelector('main');
 
-init();
+document.getElementById('play').addEventListener('click', play);
 
-function createSquare(target) {
+
+ function play() {
+   reset();
+   const level = document.getElementById('level').value;
+   const levels = [100, 81, 49];
+   const squareNumbers = levels[level];
+   init(squareNumbers);
+ }
+
+ function reset() {
+   griglia.innerHTML = '';
+   listNumbers = [];
+ }
+
+function createSquare(target, x) {
   const square = document.createElement('div');
-  square.className = 'square';
-  const number = getUniqueRandomNumber(1, 100);
+  square.className = 'square ' + `square${x}`;
+  const number = getUniqueRandomNumber(1, x);
   square.innerHTML = `<span>${number}</span>`;
   square.classList.add(getOddEven(number));
   target.append(square);
   return square;
 }
 
-function init() {
-  for(i=1; i<=100; i++) {
-    const square = createSquare(griglia);
-    square.addEventListener('click', function() {
-      this.classList.add('clicked');
-    })
-  }
-}
+function init(x) {
+   /*const grid = document.createElement('div');
+   grid.className = 'griglia';*/
+   for(i=1; i<=x; i++) {
+     const square = createSquare(griglia, x);
+     square.addEventListener('click', function() {
+       this.classList.add('clicked');
+     })
+   }
+ }
 
 function getUniqueRandomNumber(min, max) {
+  if ( listNumbers.length === max - min + 1 ) listNumbers = [];
   let number;
   let valid = false;
-  while(!valid) {
+  prova = true;
+  while(!valid /*&& prova*/) {
     number = getRandomNumber(min, max);
     if(!listNumbers.includes(number)) {
       valid = true;
       listNumbers.push(number);
     }
+    // if ( listNumbers.length === max - min + 1 ) {
+    //   prova = false;
+    //   return null;
+    // }
   }
   return number;
 }
